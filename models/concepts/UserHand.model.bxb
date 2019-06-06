@@ -1,0 +1,9 @@
+enum (UserHand) {
+  description (User's hand)
+  features {
+    transient
+  }
+  role-of (BaseHand)
+}
+
+

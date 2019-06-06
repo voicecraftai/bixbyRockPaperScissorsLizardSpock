@@ -1,0 +1,12 @@
+// Dynamically change help text depending upon whether handsfree mode is set
+dialog (Result) {
+  match: HelpScreen
+  if ($handsFree) {
+    template("How to play Rock, Paper, Scissors, Lizard, Spock") {
+      speech ("How to play Rock, Paper, Scissors, Lizard, Spock. The game is an extended version of the classic children's Game, Rock Paper, Scissors. Two new hands are added to the classic game: Lizard and Spock. Here are the rules for the new hands. Rock Crushes Lizard. Lizard poisons Spock. Scissors beheads lizard. Lizard eats paper. Paper disproves Spock. Spock distroys scissors. Spock vaporizes rock")
+    }} else {
+    template("How to play Rock, Paper, Scissors, Lizard, Spock") {
+      speech ("How to play Rock, Paper, Scissors, Lizard, Spock. The game is an extended version of the classic children's Game, Rock Paper, Scissors. Please see your screen for the detailed rules")
+    }
+  }
+}

@@ -1,0 +1,3 @@
+data:
+  aligned: '[g:Hands] {[g:UserHand] (Lizard)[v:BaseHand:Lizard]}'
+type: intent

@@ -1,0 +1,15 @@
+structure (Hands) {
+  description (Hands for user and Bixby)
+  property (userHand) {
+    type (UserHand)
+    min (Required) max (One)
+  }
+  property (bixbyHand) {
+    type (BixbyHand)
+    min (Required) max (One)
+  }
+  property (resultMessage) {
+    type (ResultMessage)
+    min (Required) max (One)    
+  }
+}

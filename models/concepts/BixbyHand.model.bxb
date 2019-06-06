@@ -1,0 +1,4 @@
+enum (BixbyHand) {
+  description (Bixby's hand)
+  role-of (BaseHand)
+}

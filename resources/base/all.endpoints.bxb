@@ -1,0 +1,12 @@
+endpoints {
+  action-endpoints {
+    action-endpoint (SelectHand) {
+      accepted-inputs (userHand)
+      local-endpoint (ShootHands.js)
+    }
+    action-endpoint (ShowHelp) {
+      accepted-inputs ()
+      local-endpoint (EmptyEndpoint.js)
+    }
+  }
+} 

@@ -1,0 +1,3 @@
+text (WhichHand) {
+  description (which hand to display - for UI)
+}

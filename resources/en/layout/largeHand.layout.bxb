@@ -1,0 +1,31 @@
+layout-macro-def(largeHand) {
+  params {
+    param (hand) {
+      type (BaseHand)
+      min (Required)
+      max (One)
+    }
+    param (who) {
+      type (WhichHand)
+      min (Required)
+      max (One)
+    }
+  }
+  content {
+    image-card {
+      aspect-ratio (16:9)
+      title-area {
+        halign (Start)
+        slot1 {
+          text {
+            value ("#{value(who)} hand")
+            style (Title_M)
+          }
+        }
+      }
+      image-url ("images/#{value(hand)}.png")
+    }
+  }
+}
+ 
+

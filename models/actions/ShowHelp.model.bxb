@@ -1,0 +1,4 @@
+action (ShowHelp) {
+  type (Search)
+  output (HelpScreen)
+}

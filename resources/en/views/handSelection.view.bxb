@@ -1,0 +1,41 @@
+// handSelectionView.view.bxb
+input-view {
+  match: UserHand (this) {
+    to-input: SelectHand(action)
+  }
+
+  // optional selection dialog to overwrite any other default dialog
+  message {
+    template (What is your hand?) {
+      speech (What is your hand: Rock, Paper, Scissors, Lizard or Spock?)
+    }
+  }
+
+  render {
+    // used to iterate over the list of possible hands
+    selection-of (this) {
+      where-each (one) { 
+        cell-card {
+          slot1 {
+            image {
+              url ("images/#{value(one)}.png")
+              shape (Circle)
+            }
+          }
+          slot2 {
+            content {
+              primary {
+                template ("#{value (one)}")
+              }
+            }
+          }          
+        }
+      }
+    }
+  }
+    conversation-drivers {
+    conversation-driver {
+      template ("Help")
+    }
+  }
+}

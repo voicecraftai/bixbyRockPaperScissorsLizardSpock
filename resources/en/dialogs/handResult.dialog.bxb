@@ -1,0 +1,6 @@
+dialog (Result) {
+  match: Hands  (hands) {
+  }
+  template("Your hand was ${value(hands.userHand)}, my hand is ${value(hands.bixbyHand)}. ${value(hands.resultMessage)}")
+}
+

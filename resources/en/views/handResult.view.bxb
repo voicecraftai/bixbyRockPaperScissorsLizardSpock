@@ -1,0 +1,36 @@
+result-view {
+  match: Hands (hands) {
+  }
+  render {
+    layout {
+      section {
+        content {
+          layout-macro (largeHand) {
+            param (hand) {
+              expression(hands.bixbyHand)
+            }
+            param (who) {
+              literal ("My")
+            }
+          }
+          layout-macro (largeHand) {
+            param (hand) {
+              expression(hands.userHand)
+            }
+            param (who) {
+              literal ("Your")
+            }
+          }
+        }
+      }
+    }
+  }
+  conversation-drivers {
+    conversation-driver {
+      template ("Play Again")
+    }
+  }
+}
+
+
+

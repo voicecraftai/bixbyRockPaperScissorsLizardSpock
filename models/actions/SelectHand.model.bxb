@@ -1,0 +1,28 @@
+action (SelectHand) {
+  description (User hand select)
+  type (Search)
+  collect {
+    input (userHand) {
+      type (UserHand)
+      min (Required) max (One)
+      default-init {
+        // Possible values are the enum values - code below shows enum values
+        intent {
+          goal: UserHand
+          value-set {@prompt-behavior(AlwaysElicitation) UserHand}
+        }
+      }
+    }
+  }
+  output (Hands) {
+    throws {
+      error (BadInput) {
+        on-catch {
+          halt {
+            dialog("Sorry, an error occured. I could not understand the userHand input")
+          }
+        }
+      }
+    }
+  }
+}

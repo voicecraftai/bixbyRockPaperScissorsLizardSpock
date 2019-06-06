@@ -1,0 +1,34 @@
+result-view {
+  match: HelpScreen () {
+    from-output: ShowHelp
+  }
+  render {
+    layout {
+      section {
+        content {
+          image {
+            url ("/images/help_header.png")
+            aspect-ratio(21:9)
+          }
+          paragraph {
+            value {
+              template ("Rock, Paper, Scissors, Lizard, Spock is an extended version of the classic children's Game, Rock Paper, Scissors.")
+            }
+            style (Detail_L)
+          }
+          paragraph {
+            value {
+                template ("Two new hands are added to the classic game: Lizard and Spock. Here are the rules for the new hands:\n - Rock Crushes Lizard\n - Lizard poisons Spock\n - Scissors beheads lizard\n - Lizard eats paper\n - Paper disproves Spock\n - Spock distroys scissors\n - Spock vaporizes rock")
+            }
+            style (Detail_L)
+          }
+        }
+      }
+    }
+  }
+  conversation-drivers {
+    conversation-driver {
+      template ("Play")
+    }
+  }
+}

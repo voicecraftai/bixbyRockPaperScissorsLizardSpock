@@ -1,0 +1,23 @@
+capsule {
+  id (playground.rockPaperScissorsLizardSpock)
+  version (1.1.0)
+  format (3)
+  targets {
+    target (bixby-mobile-en-US)
+  }
+ capsule-imports {
+    import (viv.entity) {
+      as (entity)
+      version (3.18.11)
+    }
+    import (viv.common) {as (common) version-from (entity)}
+    import (viv.image) {as (image) version-from (common)}
+  }
+  runtime-flags {
+    concepts-inherit-super-type-features
+    support-halt-effect-in-computed-inputs
+    modern-prompt-rejection
+  }
+}
+
+

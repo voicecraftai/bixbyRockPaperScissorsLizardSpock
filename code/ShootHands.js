@@ -6,28 +6,36 @@ module.exports.function = function shootHands(userHand) {
   var result = rpslsLogic(bixbyHand, userHand);
 
   if (DEBUG) {
-    console.log ("Result: win = " + result.whoWins + " message = " + result.message);
+    console.log ("Result: win = " + result.whoWon + " message = " + result.message);
   }
- 
+   
   return {
     userHand: userHand,
     bixbyHand: bixbyHand,
-    resultMessage: result
+    resultMessage: result.message,
+    whoWon: result.whoWon
   };
 }
 
 function rpslsLogic(bixbyHand, userHand) {
+  var result = {};
   if (bixbyHand == userHand) {
-    return TIE;
+    result.message = null;
+    result.whoWon = 0;
+    return result;
   } else if (!userHand in RULES){  // Error handling for bad input
      var fail = require ('fail');
      throw fail.checkedError('Unrecognized hand from user.', 'BadInput', null);
      return 'Unrecognized hand';
   } else {
     if (bixbyHand in RULES[userHand]) {
-      return RULES[userHand][bixbyHand] + YOU_WIN;
+      result.message = RULES[userHand][bixbyHand]
+      result.whoWon = 1;
+      return result;
     } else {
-      return RULES[bixbyHand][userHand] + I_WIN;
+      result.message = RULES[bixbyHand][userHand]
+      result.whoWon = 2;
+      return result;
     }
   }
 }
@@ -56,6 +64,3 @@ const RULES = {
     Rock: 'Spock vaporizes rock'
   }
 };
-const TIE = ". We tie";
-const YOU_WIN = ". You win!";
-const I_WIN = ". I win";

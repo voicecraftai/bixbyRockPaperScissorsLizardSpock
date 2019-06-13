@@ -1,0 +1,12 @@
+template-macro-def (bothChose) {
+  params {
+    param (hands) {
+      type (Hands)
+      min (Required)
+      max (One)
+    }
+  }
+  content {
+    template ("We both chose ${value(hands.userHand)}. We tie.")
+  }
+}

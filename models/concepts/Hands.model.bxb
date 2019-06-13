@@ -10,6 +10,10 @@ structure (Hands) {
   }
   property (resultMessage) {
     type (ResultMessage)
-    min (Required) max (One)    
+    min (Optional) max (One)    
+  }
+  property (whoWon) {
+    type (WhoWon)
+    min (Required) max (One) 
   }
 }

@@ -3,8 +3,3 @@ train (t-9q9v8in3k15auk8ce88szrcwv) {
   plan (Y2BiMCrISaxML8ovzUvRK8pPzg5ILEgtCk7OLC7OLyr2yaxKLEoJLgCK63mk5hQEJxelpuYxGBCrJzgjvxykj4ERCBmgGEgCAA==)
   last-modified (1555980427687)
 }
-train (t-9u94aas69sjjzz0lbg81skok2) {
-  utterance ([g:SelectHand] Play RPSLS)
-  plan (Y2Bm0C3ISaxML8ovzUvRK8pPzg5ILEgtCk7OLC7OLyr2yaxKLEoJLgCK63kk5qUUMxgRqzw4NSc1uQSkicGAWD2hxalFYB1MDIxAzAAkGRkYYDQA)
-  last-modified (1553184200233)
-}

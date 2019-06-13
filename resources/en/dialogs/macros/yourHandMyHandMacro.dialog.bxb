@@ -1,0 +1,12 @@
+template-macro-def (yourHandMyHand) {
+  params {
+    param (hands) {
+      type (Hands)
+      min (Required)
+      max (One)
+    }
+  }
+  content {
+    template ("Your hand was ${value(hands.userHand)}, my hand is ${value(hands.bixbyHand)}. [${value(hands.resultMessage)}.]")
+  }
+}

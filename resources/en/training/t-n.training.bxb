@@ -1,0 +1,5 @@
+train (t-n8bg3bvj5rgbpkohthxrcqnke) {
+  utterance ("[g:SelectHand] {[g:UserHand] (paper)[v:BaseHand:Paper]}")
+  plan (Y2Bh0C3Lz0xOTS5KTCvRK8pPzg5ILEgtCk7OLC7OLyr2yaxKLEoJLgCK63kk5qUUMxgRqzw4NSc1uQSkicGAWD2hxalFpOlwSixOBetgZmBkYAKSDGCaEUizADFMFEgCAA==)
+  last-modified (1560390626413)
+}

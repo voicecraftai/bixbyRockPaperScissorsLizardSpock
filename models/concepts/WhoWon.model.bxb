@@ -1,0 +1,3 @@
+integer (WhoWon) {
+  description (Who won: 0 = tie, 1 = user, 2 = bixby)
+}

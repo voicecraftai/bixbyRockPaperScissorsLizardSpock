@@ -1,6 +1,33 @@
 dialog (Result) {
   match: Hands  (hands) {
   }
-  template("Your hand was ${value(hands.userHand)}, my hand is ${value(hands.bixbyHand)}. ${value(hands.resultMessage)}")
+  switch (hands.whoWon) {
+    case (0) { //tie
+      choose (Random) {
+        template("#{macro('yourHandMyHand', hands)} We tie.")
+        template("We are thinking alike. #{macro('bothChose', hands)}")
+        template("Time to play again. #{macro('bothChose', hands)}")
+        template("Great minds think alike. #{macro('bothChose', hands)}")
+      }
+    }
+    case (1) { //user wins
+      choose (Random) {
+        template("#{macro('yourHandMyHand', hands)} You win!")
+        template("Hmm, was that just good luck? #{macro('yourHandMyHand', hands)} You win!")
+        template("You are good at this. #{macro('yourHandMyHand', hands)} Good job!")
+        template("You got some skills. #{macro('yourHandMyHand', hands)} Good one!")
+        template("Give poor Bixby a chance. #{macro('yourHandMyHand', hands)} You win!")
+      }
+    }
+    case (2) { //Bixby wins
+      choose (Random) {
+        template("#{macro('yourHandMyHand', hands)} I win.")
+        template("I got you! #{macro('yourHandMyHand', hands)} I win.")
+        template("Victory is mine! #{macro('yourHandMyHand', hands)} I win")
+        template("Must be having luck! #{macro('yourHandMyHand', hands)} I win this one.")
+        template("Smooth hand Bixby! #{macro('yourHandMyHand', hands)} I am victorious.")
+      }
+    }
+  }
 }
 

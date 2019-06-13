@@ -1,5 +1,5 @@
 train (t-50n9tjfifa42xiwk62zmelfyf) {
   utterance ("[g:SelectHand:prompt] {[g:UserHand] (rock)[v:BaseHand:Rock]}")
-  plan (Y2Bh0C3ISaxML8ovzUvRK8pPzg5ILEgtCk7OLC7OLyr2yaxKLEoJLgCK63kk5qUUMxgRqzw4NSc1uQSkicGAWD2hxalFpOlwSixOBetgZmBkYAKSDGCaEUizADFMFEgCAA==)
-  last-modified (1559843921372)
+  plan (Y2Bh0C3Lz0xOTS5KTCvRK8pPzg5ILEgtCk7OLC7OLyr2yaxKLEoJLgCK63kk5qUUMxgRqzw4NSc1uQSkicGAWD2hxalFpOlwSixOBetgZmBkYAKSDGCaEUizADFMFEgCAA==)
+  last-modified (1560390577981)
 }

@@ -1,0 +1,14 @@
+capsule-info {
+  display-name (Open Source Rock Paper Scissors Lizard Spock)
+  developer-name (Voicecraft LLC)
+  icon-asset (images/icon.png)
+  description ("Open Source Rock Paper Scissors Lizard Spock for Bixby")
+  dispatch-name ("Lizard Spock")
+  search-keywords {
+    keyword (Rock)
+    keyword (Paper)
+    keyword (Scissors)
+    keyword (Lizard)
+    keyword (Spock)
+  }
+}

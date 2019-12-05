@@ -1,7 +1,9 @@
 hints {
   uncategorized {
+    hint ("Start Lizard Spock")
+    hint ("Load Lizard Spock")
+    hint ("Talk to Lizard Spock")
     hint ("Ask Lizard Spock to play")
-    hint ("Ask Lizard Spock to start")
     hint ("Ask Lizard Spock for help")
   }
 }

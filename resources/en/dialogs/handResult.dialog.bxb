@@ -1,6 +1,6 @@
 dialog (Result) {
   match: Hands  (hands) {
-  }
+  }  
   switch (hands.whoWon) {
     case (0) { //tie
       choose (Random) {

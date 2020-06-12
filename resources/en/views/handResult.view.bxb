@@ -2,35 +2,37 @@ result-view {
   match: Hands (hands) {
   }
   render {
-    layout {
-      section {
-        content {
-          layout-macro (largeHand) {
-            param (hand) {
-              expression(hands.bixbyHand)
+    // No graphical UI if using watch
+    if ($can.device != 'bixby-watch') {
+      layout {
+        section {
+          content {
+            layout-macro (largeHand) {
+              param (hand) {
+                expression (hands.bixbyHand)
+              }
+              param (who) {
+                literal ("My")
+              }
             }
-            param (who) {
-              literal ("My")
-            }
-          }
-          layout-macro (largeHand) {
-            param (hand) {
-              expression(hands.userHand)
-            }
-            param (who) {
-              literal ("Your")
+            layout-macro (largeHand) {
+              param (hand) {
+                expression (hands.userHand)
+              }
+              param (who) {
+                literal ("Your")
+              }
             }
           }
         }
       }
     }
-  }
+  }  // Will not render on Watch
   conversation-drivers {
     conversation-driver {
       template ("Play Again")
     }
   }
 }
-
 
 

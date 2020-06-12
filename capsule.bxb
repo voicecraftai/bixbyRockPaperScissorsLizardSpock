@@ -4,14 +4,13 @@ capsule {
   format (3)
   targets {
     target (bixby-mobile-en-US)
+    target (bixby-watch-en-US)
   }
-  runtime-flags {
-    no-filtering-with-validation
-    modern-default-view-behavior
-    use-input-views-for-selection-list-detail
-    concepts-inherit-super-type-features
-    support-halt-effect-in-computed-inputs
-    modern-prompt-rejection
+  runtime-version (7) {
+    overrides {
+      allow-dialogs-on-detail-pages (true)
+      no-fallback-dialog-in-views (false)
+    }
   }
   store-countries {
     all {}

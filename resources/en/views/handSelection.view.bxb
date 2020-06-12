@@ -6,8 +6,18 @@ input-view {
 
   // optional selection dialog to overwrite any other default dialog
   message {
-    template (What is your hand?) {
-      speech (What is your hand: Rock, Paper, Scissors, Lizard or Spock?)
+    // No dialog at top of screen if using watch
+    if ($can.device == 'bixby-watch') {
+      template ("") {
+        speech
+        (What is your hand: Rock, Paper, Scissors, Lizard or Spock?)
+      }
+    }
+    else {
+      template (What is your hand?) {
+        speech
+        (What is your hand: Rock, Paper, Scissors, Lizard or Spock?)
+      }
     }
   }
 
